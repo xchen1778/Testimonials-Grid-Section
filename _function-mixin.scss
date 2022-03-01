@@ -1,0 +1,14 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@function getweight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
